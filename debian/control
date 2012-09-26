@@ -6,7 +6,6 @@ DM-Upload-Allowed: yes
 Build-Depends:
  cdbs,
  debhelper (>= 8),
- apache2-threaded-dev,
  erlang-dev,
  help2man,
  libapr1-dev,
@@ -553,59 +552,6 @@ Description: uGreen plugin for uWSGI
  the same core.
  .
  This package provides uGreen plugin for uWSGI.
-
-Package: libapache2-mod-uwsgi
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, apache2
-Conflicts: libapache2-mod-ruwsgi
-Replaces: libapache2-mod-ruwsgi
-Description: uwsgi module for Apache2 (mod_uwsgi)
- uWSGI presents a complete stack for networked/clustered web applications,
- implementing message/object passing, caching, RPC and process management.
- It uses the uwsgi protocol for all the networking/interprocess communications.
- .
- This package provides Apache2 module for communicating with uWSGI.
- .
- This is the first module developed, it is stable but a bit hacky (it does not
- fully use the Apache2 API).
-
-Package: libapache2-mod-uwsgi-dbg
-Architecture: any
-Section: debug
-Depends: ${misc:Depends}, libapache2-mod-uwsgi (= ${binary:Version})
-Description: debugging symbols for Apache2 mod_uwsgi
- uWSGI presents a complete stack for networked/clustered web applications,
- implementing message/object passing, caching, RPC and process management.
- .
- This package contains the debug symbols for Apache2 mod_uwsgi. Install this
- package if you need to debug module or if you need a useful backtrace of a
- crash.
-
-Package: libapache2-mod-ruwsgi
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, apache2
-Conflicts: libapache2-mod-uwsgi
-Replaces: libapache2-mod-uwsgi
-Description: uwsgi module for Apache2 (mod_Ruwsgi)
- uWSGI presents a complete stack for networked/clustered web applications,
- implementing message/object passing, caching, RPC and process management.
- It uses the uwsgi protocol for all the networking/interprocess communications.
- .
- This package provides Apache2 module for communicating with uWSGI.
- .
- This is the second module developed and it's more Apache2 API friendly.
-
-Package: libapache2-mod-ruwsgi-dbg
-Architecture: any
-Section: debug
-Depends: ${misc:Depends}, libapache2-mod-ruwsgi (= ${binary:Version})
-Description: debugging symbols for Apache2 mod_Ruwsgi
- uWSGI presents a complete stack for networked/clustered web applications,
- implementing message/object passing, caching, RPC and process management.
- .
- This package contains the debug symbols for Apache2 mod_Ruwsgi. Install this
- package if you need to debug module or if you need a useful backtrace of a
- crash.
 
 Package: python-django-uwsgi-admin
 Architecture: all
